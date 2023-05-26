@@ -13,7 +13,7 @@
     curl_close($curl);
 
     if($statusCode != 200)
-        die("Erro ao obter atualização");
+        die("Erro ao obter atualização ({$statusCode})");
         
     $release = json_decode($response, true);
 
