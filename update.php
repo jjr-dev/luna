@@ -82,7 +82,7 @@
             $fileName = $file->getPathname();
             if(in_array($fileName, $protectedsFiles)) continue;
             
-            if($file->isDir()) mkdir($targetPath);
+            if($file->isDir()) @mkdir($targetPath);
             else rename($fileName, $targetPath);
         }
 
